@@ -22,7 +22,8 @@ When powered on, every eye moves in turn to one end of its range, then the other
 | 1 | Keyestudio Nano IO Shield v1.0 (KS0146) | Optional. Makes wiring easier. |
 | 1 | PCA9685 16-channel servo driver | Adafruit #815 or a clone. |
 | 8 | SG90 micro servos | One per eye. Fewer is fine. |
-| 8 | Plastic eyeballs with swivel sockets | |
+| 8 | Plastic eyeballs | |
+| 8 | 3D-printed eye sockets | [`hardware/eye-socket.stl`](hardware/eye-socket.stl). See [Eye socket](#eye-socket). |
 | 1 | 5 V 3 A power supply | Barrel or bare-wire output. 3 A is enough for 8 SG90s moving one at a time. |
 | 1 | 470–1000 µF electrolytic capacitor, 10 V or higher | Smooths servo current spikes. |
 | 1 | USB-C cable and USB charger | Powers the Nano. |
@@ -30,6 +31,18 @@ When powered on, every eye moves in turn to one end of its range, then the other
 | | 18–20 AWG wire | Supply to PCA9685 screw terminal. |
 | | Servo extension cables | If the eyes are far from the PCA9685. |
 | 1 | Pumpkin | A foam craft pumpkin lasts longer and stays dry. See [Step 6](#step-6-install-in-the-pumpkin). |
+
+### Eye socket
+
+The eye socket is a simple ring that each eyeball sits in. Print one per eye from [`hardware/eye-socket.stl`](hardware/eye-socket.stl).
+
+| Dimension | Inches | mm |
+|---|---|---|
+| Inside diameter | 1.6 in | 40.6 mm |
+| Outside diameter | 1.9 in | 48.3 mm |
+| Height | 1.0 in | 25.4 mm |
+
+The STL file is in millimetres. If your slicer shows the part about 25 times too large, it's reading the file as inches.
 
 ## Step 1: Install the software
 
@@ -147,6 +160,7 @@ All settings are constants at the top of `PumpkinEyes.ino`.
 firmware/PumpkinEyes/PumpkinEyes.ino   Arduino sketch
 docs/wiring-shield.svg                 Wiring diagram, Keyestudio shield option
 docs/wiring-breadboard.svg             Wiring diagram, breadboard option
+hardware/eye-socket.stl                3D-printable eye socket (mm)
 LICENSE                                MIT license
 ```
 
