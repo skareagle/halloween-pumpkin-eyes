@@ -1,0 +1,196 @@
+<svg viewBox="0 0 1020 580" width="1020" height="580" xmlns="http://www.w3.org/2000/svg">
+<style>
+.comp { fill: #ffffff; stroke: #18211e; stroke-width: 1.5; }
+.board { fill: #e3eee8; stroke: #4f7a65; stroke-width: 1.5; }
+.shield { fill: #e6ebf3; stroke: #5a6f93; stroke-width: 1.5; }
+.hdr { fill: #ffffff; stroke: #5a6f93; stroke-width: 1.2; }
+.bb { fill: none; stroke: #d3dcd8; stroke-width: 1.5; stroke-dasharray: 6 5; }
+.t-title { fill: #18211e; font: 600 14px system-ui, -apple-system, "Segoe UI", sans-serif; }
+.t-pin { fill: #18211e; font: 500 11.5px ui-monospace, "SFMono-Regular", Menlo, monospace; }
+.t-dim { fill: #5b6863; font: 400 11px ui-monospace, "SFMono-Regular", Menlo, monospace; }
+.t-note { fill: #5b6863; font: 400 11.5px system-ui, -apple-system, "Segoe UI", sans-serif; }
+.t-warn { fill: #d23a2c; font: 500 11px system-ui, -apple-system, "Segoe UI", sans-serif; }
+.w { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.w-pow { stroke-width: 4; }
+.w-sig { stroke-width: 2.5; }
+.w-usb { stroke: #7c8a85; stroke-width: 6; }
+.c-5v { stroke: #d23a2c; }
+.c-gnd { stroke: #222a27; }
+.c-3v3 { stroke: #e08a12; }
+.c-sda { stroke: #2f6fd0; }
+.c-scl { stroke: #23935a; }
+.c-sig { stroke: #ef8f1c; }
+.c-brn { stroke: #7a4a2a; }
+.dot-5v { fill: #d23a2c; }
+.dot-gnd { fill: #222a27; }
+.pin { fill: #18211e; }
+.pin-dim { fill: #5b6863; }
+.pin-nc { fill: #ffffff; stroke: #18211e; stroke-width: 1.5; }
+.x-mark { stroke: #d23a2c; stroke-width: 2; stroke-linecap: round; }
+.cap { fill: none; stroke: #18211e; stroke-width: 2; }
+.cap-opt { fill: none; stroke: #5b6863; stroke-width: 2; stroke-dasharray: 3 3; }
+
+</style>
+<rect width="1020" height="580" fill="#ffffff"/>
+        <!-- Supply -->
+        <rect class="comp" x="30" y="40" width="170" height="100" rx="4"/>
+        <text class="t-title" x="46" y="66">Power supply</text>
+        <text class="t-note" x="46" y="84">5 V · 3 A</text>
+        <text class="t-pin" x="188" y="74" text-anchor="end">+5V</text>
+        <text class="t-pin" x="188" y="114" text-anchor="end">GND</text>
+
+        <!-- Terminal block -->
+        <rect class="comp" x="270" y="40" width="140" height="100" rx="4"/>
+        <text class="t-note" x="340" y="56" text-anchor="middle">Terminal block</text>
+        <line class="w w-pow c-5v" x1="280" y1="70" x2="400" y2="70"/>
+        <line class="w w-pow c-gnd" x1="280" y1="110" x2="400" y2="110"/>
+        <text class="t-pin" x="396" y="64" text-anchor="end">+</text>
+        <text class="t-pin" x="396" y="128" text-anchor="end">−</text>
+
+        <line class="w w-pow c-5v" x1="200" y1="70" x2="280" y2="70"/>
+        <line class="w w-pow c-gnd" x1="200" y1="110" x2="280" y2="110"/>
+
+        <line class="w w-pow c-5v" x1="400" y1="70" x2="620" y2="70"/>
+        <line class="w w-pow c-gnd" x1="400" y1="110" x2="620" y2="110"/>
+        <text class="t-note" x="480" y="62" text-anchor="middle">18–20 AWG, short</text>
+
+        <!-- PCA9685 board -->
+        <rect class="board" x="560" y="40" width="440" height="300" rx="6"/>
+        <text class="t-title" x="984" y="64" text-anchor="end">PCA9685 servo driver</text>
+        <text class="t-note" x="984" y="82" text-anchor="end">16 channels, I²C address 0x40</text>
+        <text class="t-pin" x="570" y="64">V+</text>
+        <text class="t-pin" x="570" y="128">GND</text>
+        <text class="t-note" x="570" y="146">screw terminal</text>
+        <path class="cap" d="M600 70 V85 M588 85 H612 M600 110 V95"/>
+        <path class="cap" d="M588 97 Q600 91 612 97"/>
+        <text class="t-pin" x="592" y="82" text-anchor="end">+</text>
+        <text class="t-pin" x="630" y="88">C2</text>
+        <text class="t-note" x="630" y="104">470–1000 µF, ≥10 V</text>
+        <text class="t-pin" x="572" y="194">GND</text>
+        <text class="t-pin" x="572" y="224">SCL</text>
+        <text class="t-pin" x="572" y="254">SDA</text>
+        <text class="t-pin" x="572" y="284">VCC</text>
+        <text class="t-note" x="572" y="168">OE, V+ pins: leave unconnected</text>
+        <circle class="pin" cx="560" cy="190" r="3.5"/>
+        <circle class="pin" cx="560" cy="220" r="3.5"/>
+        <circle class="pin" cx="560" cy="250" r="3.5"/>
+        <circle class="pin" cx="560" cy="280" r="3.5"/>
+        <text class="t-note" x="833" y="232" text-anchor="middle">Channels 0–7 (8–15 free) · V+ feeds every header</text>
+        <rect class="comp" x="687" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="700" cy="306" r="2.5"/>
+<circle class="pin" cx="700" cy="316" r="2.5"/>
+<circle class="pin" cx="700" cy="326" r="2.5"/>
+<text class="t-pin" x="700" y="288" text-anchor="middle">0</text>
+<rect class="comp" x="725" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="738" cy="306" r="2.5"/>
+<circle class="pin" cx="738" cy="316" r="2.5"/>
+<circle class="pin" cx="738" cy="326" r="2.5"/>
+<text class="t-pin" x="738" y="288" text-anchor="middle">1</text>
+<rect class="comp" x="763" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="776" cy="306" r="2.5"/>
+<circle class="pin" cx="776" cy="316" r="2.5"/>
+<circle class="pin" cx="776" cy="326" r="2.5"/>
+<text class="t-pin" x="776" y="288" text-anchor="middle">2</text>
+<rect class="comp" x="801" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="814" cy="306" r="2.5"/>
+<circle class="pin" cx="814" cy="316" r="2.5"/>
+<circle class="pin" cx="814" cy="326" r="2.5"/>
+<text class="t-pin" x="814" y="288" text-anchor="middle">3</text>
+<rect class="comp" x="839" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="852" cy="306" r="2.5"/>
+<circle class="pin" cx="852" cy="316" r="2.5"/>
+<circle class="pin" cx="852" cy="326" r="2.5"/>
+<text class="t-pin" x="852" y="288" text-anchor="middle">4</text>
+<rect class="comp" x="877" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="890" cy="306" r="2.5"/>
+<circle class="pin" cx="890" cy="316" r="2.5"/>
+<circle class="pin" cx="890" cy="326" r="2.5"/>
+<text class="t-pin" x="890" y="288" text-anchor="middle">5</text>
+<rect class="comp" x="915" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="928" cy="306" r="2.5"/>
+<circle class="pin" cx="928" cy="316" r="2.5"/>
+<circle class="pin" cx="928" cy="326" r="2.5"/>
+<text class="t-pin" x="928" y="288" text-anchor="middle">6</text>
+<rect class="comp" x="953" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="966" cy="306" r="2.5"/>
+<circle class="pin" cx="966" cy="316" r="2.5"/>
+<circle class="pin" cx="966" cy="326" r="2.5"/>
+<text class="t-pin" x="966" y="288" text-anchor="middle">7</text>
+        <path class="w w-sig c-sig" d="M694 336 V410"/>
+<path class="w w-sig c-5v" d="M700 336 V410"/>
+<path class="w w-sig c-brn" d="M706 336 V410"/>
+<rect class="comp" x="684" y="410" width="32" height="44" rx="4"/>
+<circle class="comp" cx="700" cy="424" r="6"/>
+<text class="t-pin" x="700" y="448" text-anchor="middle">S1</text>
+<path class="w w-sig c-sig" d="M732 336 V410"/>
+<path class="w w-sig c-5v" d="M738 336 V410"/>
+<path class="w w-sig c-brn" d="M744 336 V410"/>
+<rect class="comp" x="722" y="410" width="32" height="44" rx="4"/>
+<circle class="comp" cx="738" cy="424" r="6"/>
+<text class="t-pin" x="738" y="448" text-anchor="middle">S2</text>
+<path class="w w-sig c-sig" d="M770 336 V410"/>
+<path class="w w-sig c-5v" d="M776 336 V410"/>
+<path class="w w-sig c-brn" d="M782 336 V410"/>
+<rect class="comp" x="760" y="410" width="32" height="44" rx="4"/>
+<circle class="comp" cx="776" cy="424" r="6"/>
+<text class="t-pin" x="776" y="448" text-anchor="middle">S3</text>
+<path class="w w-sig c-sig" d="M808 336 V410"/>
+<path class="w w-sig c-5v" d="M814 336 V410"/>
+<path class="w w-sig c-brn" d="M820 336 V410"/>
+<rect class="comp" x="798" y="410" width="32" height="44" rx="4"/>
+<circle class="comp" cx="814" cy="424" r="6"/>
+<text class="t-pin" x="814" y="448" text-anchor="middle">S4</text>
+<path class="w w-sig c-sig" d="M846 336 V410"/>
+<path class="w w-sig c-5v" d="M852 336 V410"/>
+<path class="w w-sig c-brn" d="M858 336 V410"/>
+<rect class="comp" x="836" y="410" width="32" height="44" rx="4"/>
+<circle class="comp" cx="852" cy="424" r="6"/>
+<text class="t-pin" x="852" y="448" text-anchor="middle">S5</text>
+<path class="w w-sig c-sig" d="M884 336 V410"/>
+<path class="w w-sig c-5v" d="M890 336 V410"/>
+<path class="w w-sig c-brn" d="M896 336 V410"/>
+<rect class="comp" x="874" y="410" width="32" height="44" rx="4"/>
+<circle class="comp" cx="890" cy="424" r="6"/>
+<text class="t-pin" x="890" y="448" text-anchor="middle">S6</text>
+<path class="w w-sig c-sig" d="M922 336 V410"/>
+<path class="w w-sig c-5v" d="M928 336 V410"/>
+<path class="w w-sig c-brn" d="M934 336 V410"/>
+<rect class="comp" x="912" y="410" width="32" height="44" rx="4"/>
+<circle class="comp" cx="928" cy="424" r="6"/>
+<text class="t-pin" x="928" y="448" text-anchor="middle">S7</text>
+<path class="w w-sig c-sig" d="M960 336 V410"/>
+<path class="w w-sig c-5v" d="M966 336 V410"/>
+<path class="w w-sig c-brn" d="M972 336 V410"/>
+<rect class="comp" x="950" y="410" width="32" height="44" rx="4"/>
+<circle class="comp" cx="966" cy="424" r="6"/>
+<text class="t-pin" x="966" y="448" text-anchor="middle">S8</text>
+        <text class="t-note" x="833" y="482" text-anchor="middle">8 × SG90 · orange = signal, red = +5 V, brown = GND</text>
+
+        <!-- Breadboard + Nano -->
+        <rect class="bb" x="40" y="370" width="380" height="180" rx="6"/>
+        <text class="t-note" x="52" y="540">Breadboard</text>
+        <rect class="board" x="80" y="440" width="320" height="80" rx="4"/>
+        <rect class="comp" x="64" y="465" width="18" height="30" rx="3"/>
+        <text class="t-note" x="44" y="458">USB-C</text>
+        <text class="t-title" x="150" y="502">Arduino Nano ESP32</text>
+        <text class="t-pin" x="130" y="458" text-anchor="middle">VIN</text>
+        <text class="t-pin" x="180" y="458" text-anchor="middle">GND</text>
+        <circle class="pin" cx="130" cy="440" r="3.5"/>
+        <circle class="pin" cx="180" cy="440" r="3.5"/>
+        <text class="t-pin" x="392" y="456" text-anchor="end">GND</text>
+        <text class="t-pin" x="392" y="476" text-anchor="end">A5</text>
+        <text class="t-pin" x="392" y="496" text-anchor="end">A4</text>
+        <text class="t-pin" x="392" y="516" text-anchor="end">3V3</text>
+
+        <path class="w w-sig c-5v" d="M300 70 V104 A6 6 0 0 1 300 116 V395 H130 V440"/>
+        <path class="w w-sig c-gnd" d="M340 110 V425 H180 V440"/>
+        <circle class="dot-5v" cx="300" cy="70" r="4.5"/>
+        <circle class="dot-gnd" cx="340" cy="110" r="4.5"/>
+        <path class="cap-opt" d="M220 395 V406 M210 406 H230 M220 425 V414 M210 414 H230"/>
+        <text class="t-note" x="236" y="414">optional 100–470 µF</text>
+
+        <path class="w w-sig c-gnd" d="M400 452 H440 V190 H560"/>
+        <path class="w w-sig c-scl" d="M400 472 H470 V220 H560"/>
+        <path class="w w-sig c-sda" d="M400 492 H500 V250 H560"/>
+        <path class="w w-sig c-3v3" d="M400 512 H530 V280 H560"/>
+      </svg>
