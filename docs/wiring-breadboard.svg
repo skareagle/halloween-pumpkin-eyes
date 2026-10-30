@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1020 580" width="1020" height="580" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1160 580" width="1160" height="580" xmlns="http://www.w3.org/2000/svg">
 <style>
 .comp { fill: #ffffff; stroke: #18211e; stroke-width: 1.5; }
 .board { fill: #e3eee8; stroke: #4f7a65; stroke-width: 1.5; }
@@ -31,7 +31,7 @@
 .cap-opt { fill: none; stroke: #5b6863; stroke-width: 2; stroke-dasharray: 3 3; }
 
 </style>
-<rect width="1020" height="580" fill="#ffffff"/>
+<rect width="1160" height="580" fill="#ffffff"/>
         <!-- Supply -->
         <rect class="comp" x="30" y="40" width="170" height="100" rx="4"/>
         <text class="t-title" x="46" y="66">Power supply</text>
@@ -55,9 +55,9 @@
         <text class="t-note" x="480" y="62" text-anchor="middle">18–20 AWG, short</text>
 
         <!-- PCA9685 board -->
-        <rect class="board" x="560" y="40" width="440" height="300" rx="6"/>
-        <text class="t-title" x="984" y="64" text-anchor="end">PCA9685 servo driver</text>
-        <text class="t-note" x="984" y="82" text-anchor="end">16 channels, I²C address 0x40</text>
+        <rect class="board" x="560" y="40" width="580" height="300" rx="6"/>
+        <text class="t-title" x="1124" y="64" text-anchor="end">PCA9685 servo driver</text>
+        <text class="t-note" x="1124" y="82" text-anchor="end">16 channels, I²C address 0x40</text>
         <text class="t-pin" x="570" y="64">V+</text>
         <text class="t-pin" x="570" y="128">GND</text>
         <text class="t-note" x="570" y="146">screw terminal</text>
@@ -75,96 +75,140 @@
         <circle class="pin" cx="560" cy="220" r="3.5"/>
         <circle class="pin" cx="560" cy="250" r="3.5"/>
         <circle class="pin" cx="560" cy="280" r="3.5"/>
-        <text class="t-note" x="833" y="232" text-anchor="middle">Channels 0–7 (8–15 free) · V+ feeds every header</text>
+        <text class="t-note" x="898" y="232" text-anchor="middle">Channels 0–11 (12–15 free) · V+ feeds every header</text>
         <rect class="comp" x="687" y="296" width="26" height="40" rx="2"/>
 <circle class="pin" cx="700" cy="306" r="2.5"/>
 <circle class="pin" cx="700" cy="316" r="2.5"/>
 <circle class="pin" cx="700" cy="326" r="2.5"/>
 <text class="t-pin" x="700" y="288" text-anchor="middle">0</text>
-<rect class="comp" x="725" y="296" width="26" height="40" rx="2"/>
-<circle class="pin" cx="738" cy="306" r="2.5"/>
-<circle class="pin" cx="738" cy="316" r="2.5"/>
-<circle class="pin" cx="738" cy="326" r="2.5"/>
-<text class="t-pin" x="738" y="288" text-anchor="middle">1</text>
-<rect class="comp" x="763" y="296" width="26" height="40" rx="2"/>
-<circle class="pin" cx="776" cy="306" r="2.5"/>
-<circle class="pin" cx="776" cy="316" r="2.5"/>
-<circle class="pin" cx="776" cy="326" r="2.5"/>
-<text class="t-pin" x="776" y="288" text-anchor="middle">2</text>
-<rect class="comp" x="801" y="296" width="26" height="40" rx="2"/>
-<circle class="pin" cx="814" cy="306" r="2.5"/>
-<circle class="pin" cx="814" cy="316" r="2.5"/>
-<circle class="pin" cx="814" cy="326" r="2.5"/>
-<text class="t-pin" x="814" y="288" text-anchor="middle">3</text>
-<rect class="comp" x="839" y="296" width="26" height="40" rx="2"/>
-<circle class="pin" cx="852" cy="306" r="2.5"/>
-<circle class="pin" cx="852" cy="316" r="2.5"/>
-<circle class="pin" cx="852" cy="326" r="2.5"/>
-<text class="t-pin" x="852" y="288" text-anchor="middle">4</text>
-<rect class="comp" x="877" y="296" width="26" height="40" rx="2"/>
-<circle class="pin" cx="890" cy="306" r="2.5"/>
-<circle class="pin" cx="890" cy="316" r="2.5"/>
-<circle class="pin" cx="890" cy="326" r="2.5"/>
-<text class="t-pin" x="890" y="288" text-anchor="middle">5</text>
-<rect class="comp" x="915" y="296" width="26" height="40" rx="2"/>
-<circle class="pin" cx="928" cy="306" r="2.5"/>
-<circle class="pin" cx="928" cy="316" r="2.5"/>
-<circle class="pin" cx="928" cy="326" r="2.5"/>
-<text class="t-pin" x="928" y="288" text-anchor="middle">6</text>
-<rect class="comp" x="953" y="296" width="26" height="40" rx="2"/>
-<circle class="pin" cx="966" cy="306" r="2.5"/>
-<circle class="pin" cx="966" cy="316" r="2.5"/>
-<circle class="pin" cx="966" cy="326" r="2.5"/>
-<text class="t-pin" x="966" y="288" text-anchor="middle">7</text>
+<rect class="comp" x="723" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="736" cy="306" r="2.5"/>
+<circle class="pin" cx="736" cy="316" r="2.5"/>
+<circle class="pin" cx="736" cy="326" r="2.5"/>
+<text class="t-pin" x="736" y="288" text-anchor="middle">1</text>
+<rect class="comp" x="759" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="772" cy="306" r="2.5"/>
+<circle class="pin" cx="772" cy="316" r="2.5"/>
+<circle class="pin" cx="772" cy="326" r="2.5"/>
+<text class="t-pin" x="772" y="288" text-anchor="middle">2</text>
+<rect class="comp" x="795" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="808" cy="306" r="2.5"/>
+<circle class="pin" cx="808" cy="316" r="2.5"/>
+<circle class="pin" cx="808" cy="326" r="2.5"/>
+<text class="t-pin" x="808" y="288" text-anchor="middle">3</text>
+<rect class="comp" x="831" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="844" cy="306" r="2.5"/>
+<circle class="pin" cx="844" cy="316" r="2.5"/>
+<circle class="pin" cx="844" cy="326" r="2.5"/>
+<text class="t-pin" x="844" y="288" text-anchor="middle">4</text>
+<rect class="comp" x="867" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="880" cy="306" r="2.5"/>
+<circle class="pin" cx="880" cy="316" r="2.5"/>
+<circle class="pin" cx="880" cy="326" r="2.5"/>
+<text class="t-pin" x="880" y="288" text-anchor="middle">5</text>
+<rect class="comp" x="903" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="916" cy="306" r="2.5"/>
+<circle class="pin" cx="916" cy="316" r="2.5"/>
+<circle class="pin" cx="916" cy="326" r="2.5"/>
+<text class="t-pin" x="916" y="288" text-anchor="middle">6</text>
+<rect class="comp" x="939" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="952" cy="306" r="2.5"/>
+<circle class="pin" cx="952" cy="316" r="2.5"/>
+<circle class="pin" cx="952" cy="326" r="2.5"/>
+<text class="t-pin" x="952" y="288" text-anchor="middle">7</text>
+<rect class="comp" x="975" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="988" cy="306" r="2.5"/>
+<circle class="pin" cx="988" cy="316" r="2.5"/>
+<circle class="pin" cx="988" cy="326" r="2.5"/>
+<text class="t-pin" x="988" y="288" text-anchor="middle">8</text>
+<rect class="comp" x="1011" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="1024" cy="306" r="2.5"/>
+<circle class="pin" cx="1024" cy="316" r="2.5"/>
+<circle class="pin" cx="1024" cy="326" r="2.5"/>
+<text class="t-pin" x="1024" y="288" text-anchor="middle">9</text>
+<rect class="comp" x="1047" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="1060" cy="306" r="2.5"/>
+<circle class="pin" cx="1060" cy="316" r="2.5"/>
+<circle class="pin" cx="1060" cy="326" r="2.5"/>
+<text class="t-pin" x="1060" y="288" text-anchor="middle">10</text>
+<rect class="comp" x="1083" y="296" width="26" height="40" rx="2"/>
+<circle class="pin" cx="1096" cy="306" r="2.5"/>
+<circle class="pin" cx="1096" cy="316" r="2.5"/>
+<circle class="pin" cx="1096" cy="326" r="2.5"/>
+<text class="t-pin" x="1096" y="288" text-anchor="middle">11</text>
         <path class="w w-sig c-sig" d="M694 336 V410"/>
 <path class="w w-sig c-5v" d="M700 336 V410"/>
 <path class="w w-sig c-brn" d="M706 336 V410"/>
-<rect class="comp" x="684" y="410" width="32" height="44" rx="4"/>
+<rect class="comp" x="685" y="410" width="30" height="44" rx="4"/>
 <circle class="comp" cx="700" cy="424" r="6"/>
 <text class="t-pin" x="700" y="448" text-anchor="middle">S1</text>
-<path class="w w-sig c-sig" d="M732 336 V410"/>
-<path class="w w-sig c-5v" d="M738 336 V410"/>
-<path class="w w-sig c-brn" d="M744 336 V410"/>
-<rect class="comp" x="722" y="410" width="32" height="44" rx="4"/>
-<circle class="comp" cx="738" cy="424" r="6"/>
-<text class="t-pin" x="738" y="448" text-anchor="middle">S2</text>
-<path class="w w-sig c-sig" d="M770 336 V410"/>
-<path class="w w-sig c-5v" d="M776 336 V410"/>
-<path class="w w-sig c-brn" d="M782 336 V410"/>
-<rect class="comp" x="760" y="410" width="32" height="44" rx="4"/>
-<circle class="comp" cx="776" cy="424" r="6"/>
-<text class="t-pin" x="776" y="448" text-anchor="middle">S3</text>
-<path class="w w-sig c-sig" d="M808 336 V410"/>
-<path class="w w-sig c-5v" d="M814 336 V410"/>
-<path class="w w-sig c-brn" d="M820 336 V410"/>
-<rect class="comp" x="798" y="410" width="32" height="44" rx="4"/>
-<circle class="comp" cx="814" cy="424" r="6"/>
-<text class="t-pin" x="814" y="448" text-anchor="middle">S4</text>
-<path class="w w-sig c-sig" d="M846 336 V410"/>
-<path class="w w-sig c-5v" d="M852 336 V410"/>
-<path class="w w-sig c-brn" d="M858 336 V410"/>
-<rect class="comp" x="836" y="410" width="32" height="44" rx="4"/>
-<circle class="comp" cx="852" cy="424" r="6"/>
-<text class="t-pin" x="852" y="448" text-anchor="middle">S5</text>
-<path class="w w-sig c-sig" d="M884 336 V410"/>
-<path class="w w-sig c-5v" d="M890 336 V410"/>
-<path class="w w-sig c-brn" d="M896 336 V410"/>
-<rect class="comp" x="874" y="410" width="32" height="44" rx="4"/>
-<circle class="comp" cx="890" cy="424" r="6"/>
-<text class="t-pin" x="890" y="448" text-anchor="middle">S6</text>
-<path class="w w-sig c-sig" d="M922 336 V410"/>
-<path class="w w-sig c-5v" d="M928 336 V410"/>
-<path class="w w-sig c-brn" d="M934 336 V410"/>
-<rect class="comp" x="912" y="410" width="32" height="44" rx="4"/>
-<circle class="comp" cx="928" cy="424" r="6"/>
-<text class="t-pin" x="928" y="448" text-anchor="middle">S7</text>
-<path class="w w-sig c-sig" d="M960 336 V410"/>
-<path class="w w-sig c-5v" d="M966 336 V410"/>
-<path class="w w-sig c-brn" d="M972 336 V410"/>
-<rect class="comp" x="950" y="410" width="32" height="44" rx="4"/>
-<circle class="comp" cx="966" cy="424" r="6"/>
-<text class="t-pin" x="966" y="448" text-anchor="middle">S8</text>
-        <text class="t-note" x="833" y="482" text-anchor="middle">8 × SG90 · orange = signal, red = +5 V, brown = GND</text>
+<path class="w w-sig c-sig" d="M730 336 V410"/>
+<path class="w w-sig c-5v" d="M736 336 V410"/>
+<path class="w w-sig c-brn" d="M742 336 V410"/>
+<rect class="comp" x="721" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="736" cy="424" r="6"/>
+<text class="t-pin" x="736" y="448" text-anchor="middle">S2</text>
+<path class="w w-sig c-sig" d="M766 336 V410"/>
+<path class="w w-sig c-5v" d="M772 336 V410"/>
+<path class="w w-sig c-brn" d="M778 336 V410"/>
+<rect class="comp" x="757" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="772" cy="424" r="6"/>
+<text class="t-pin" x="772" y="448" text-anchor="middle">S3</text>
+<path class="w w-sig c-sig" d="M802 336 V410"/>
+<path class="w w-sig c-5v" d="M808 336 V410"/>
+<path class="w w-sig c-brn" d="M814 336 V410"/>
+<rect class="comp" x="793" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="808" cy="424" r="6"/>
+<text class="t-pin" x="808" y="448" text-anchor="middle">S4</text>
+<path class="w w-sig c-sig" d="M838 336 V410"/>
+<path class="w w-sig c-5v" d="M844 336 V410"/>
+<path class="w w-sig c-brn" d="M850 336 V410"/>
+<rect class="comp" x="829" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="844" cy="424" r="6"/>
+<text class="t-pin" x="844" y="448" text-anchor="middle">S5</text>
+<path class="w w-sig c-sig" d="M874 336 V410"/>
+<path class="w w-sig c-5v" d="M880 336 V410"/>
+<path class="w w-sig c-brn" d="M886 336 V410"/>
+<rect class="comp" x="865" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="880" cy="424" r="6"/>
+<text class="t-pin" x="880" y="448" text-anchor="middle">S6</text>
+<path class="w w-sig c-sig" d="M910 336 V410"/>
+<path class="w w-sig c-5v" d="M916 336 V410"/>
+<path class="w w-sig c-brn" d="M922 336 V410"/>
+<rect class="comp" x="901" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="916" cy="424" r="6"/>
+<text class="t-pin" x="916" y="448" text-anchor="middle">S7</text>
+<path class="w w-sig c-sig" d="M946 336 V410"/>
+<path class="w w-sig c-5v" d="M952 336 V410"/>
+<path class="w w-sig c-brn" d="M958 336 V410"/>
+<rect class="comp" x="937" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="952" cy="424" r="6"/>
+<text class="t-pin" x="952" y="448" text-anchor="middle">S8</text>
+<path class="w w-sig c-sig" d="M982 336 V410"/>
+<path class="w w-sig c-5v" d="M988 336 V410"/>
+<path class="w w-sig c-brn" d="M994 336 V410"/>
+<rect class="comp" x="973" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="988" cy="424" r="6"/>
+<text class="t-pin" x="988" y="448" text-anchor="middle">S9</text>
+<path class="w w-sig c-sig" d="M1018 336 V410"/>
+<path class="w w-sig c-5v" d="M1024 336 V410"/>
+<path class="w w-sig c-brn" d="M1030 336 V410"/>
+<rect class="comp" x="1009" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="1024" cy="424" r="6"/>
+<text class="t-pin" x="1024" y="448" text-anchor="middle">S10</text>
+<path class="w w-sig c-sig" d="M1054 336 V410"/>
+<path class="w w-sig c-5v" d="M1060 336 V410"/>
+<path class="w w-sig c-brn" d="M1066 336 V410"/>
+<rect class="comp" x="1045" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="1060" cy="424" r="6"/>
+<text class="t-pin" x="1060" y="448" text-anchor="middle">S11</text>
+<path class="w w-sig c-sig" d="M1090 336 V410"/>
+<path class="w w-sig c-5v" d="M1096 336 V410"/>
+<path class="w w-sig c-brn" d="M1102 336 V410"/>
+<rect class="comp" x="1081" y="410" width="30" height="44" rx="4"/>
+<circle class="comp" cx="1096" cy="424" r="6"/>
+<text class="t-pin" x="1096" y="448" text-anchor="middle">S12</text>
+        <text class="t-note" x="898" y="482" text-anchor="middle">12 × SG90 · orange = signal, red = +5 V, brown = GND</text>
 
         <!-- Breadboard + Nano -->
         <rect class="bb" x="40" y="370" width="380" height="180" rx="6"/>

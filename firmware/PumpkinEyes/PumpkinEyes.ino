@@ -1,7 +1,7 @@
 // Pumpkin Eyes - Arduino Nano ESP32 + PCA9685, one SG90 servo per eyeball
 // Start sequence (servos one at a time): MIN_ANGLE -> MAX_ANGLE -> midpoint
-// (hold 5s after each step). Then keeps picking a random servo and jumping it to a
-// random position between MIN_ANGLE and MAX_ANGLE.
+// (hold 5s after each step). Then keeps picking EYES_PER_MOVE different random
+// servos and jumping each to its own random position between MIN_ANGLE and MAX_ANGLE.
 // Each new position is at least MIN_CHANGE degrees from that servo's last.
 //
 // Wiring: PCA9685 SDA -> A4, SCL -> A5, VCC -> 3.3V, GND -> GND.
@@ -11,13 +11,14 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 
-const int SERVO_CHANNELS[] = {0, 1, 2, 3, 4, 5, 6, 7}; // one PCA9685 channel per eye
+const int SERVO_CHANNELS[] = {0, 1, 2, 3, 4, 5, 6, 7,8, 9, 10, 11}; // one PCA9685 channel per eye
 const int SERVO_COUNT = sizeof(SERVO_CHANNELS) / sizeof(SERVO_CHANNELS[0]);
 const int MIN_ANGLE = 0;
 const int MAX_ANGLE = 150;
 const int MIN_CHANGE = 20;      // minimum difference from previous position
+const int EYES_PER_MOVE = 3;    // how many different eyes move together
 const int START_HOLD_MS = 5000; // hold time for each start sequence position
-const int HOLD_MS = 500;        // hold time after each random move
+const int HOLD_MS = 500;        // hold time after each group of random moves
 const int STAGGER_MS = 600;     // gap between servos during start up (one full move)
 
 // SG90 pulse range for 0 and 180 degrees. Narrow these if a servo buzzes
@@ -69,8 +70,29 @@ void setup() {
   }
 }
 
+// Fills picks[] with count different servo indexes, in random order
+// (a partial Fisher-Yates shuffle).
+void pickServos(int picks[], int count) {
+  int order[SERVO_COUNT];
+  for (int s = 0; s < SERVO_COUNT; s++) {
+    order[s] = s;
+  }
+  for (int i = 0; i < count; i++) {
+    int j = random(i, SERVO_COUNT);
+    int tmp = order[i];
+    order[i] = order[j];
+    order[j] = tmp;
+    picks[i] = order[i];
+  }
+}
+
 void loop() {
-  int s = random(SERVO_COUNT);
-  moveTo(s, pickNextAngle(currentAngles[s]));
+  const int count = min(EYES_PER_MOVE, SERVO_COUNT);
+  int picks[SERVO_COUNT];
+  pickServos(picks, count);
+
+  for (int i = 0; i < count; i++) {
+    moveTo(picks[i], pickNextAngle(currentAngles[picks[i]]));
+  }
   delay(HOLD_MS);
 }
