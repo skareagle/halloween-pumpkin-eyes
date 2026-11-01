@@ -4,7 +4,13 @@ Plastic eyeballs that look around on their own from inside a carved pumpkin. Eac
 
 > **Credit:** This build is based on an idea from the YouTube video [Pumpkin Routines DEMO - Pumpkin with moving eyes update](https://www.youtube.com/watch?v=qQNtnuWvH2k) by **Two Boys and a Camera**. This repo documents my own take on the electronics and code.
 
-<!-- TODO: add a photo or GIF of the finished pumpkin here -->
+## Demo
+
+Click a thumbnail to watch the video on YouTube.
+
+| A single pair of eyes | 12 eyes in a pumpkin |
+|---|---|
+| <a href="https://www.youtube.com/watch?v=rMcllJ7E94A"><img src="https://img.youtube.com/vi/rMcllJ7E94A/maxresdefault.jpg" alt="Video: a single pair of pumpkin eyes" width="400"></a> | <a href="https://www.youtube.com/watch?v=TWEZGnq-aPU"><img src="https://img.youtube.com/vi/TWEZGnq-aPU/maxresdefault.jpg" alt="Video: pumpkin with 12 moving eyes" width="400"></a> |
 
 ## How it works
 
