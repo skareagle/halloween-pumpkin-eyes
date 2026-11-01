@@ -1,6 +1,6 @@
 # Halloween Pumpkin Eyes
 
-Plastic eyeballs that look around on their own from inside a carved pumpkin. Each eyeball sits in a swivel socket and is moved by a small SG90 servo. An Arduino Nano ESP32 drives 8 eyes through a PCA9685 servo driver (it can handle up to 16). Every 1.5 seconds, three random eyes each look in a new random direction.
+Plastic eyeballs that look around on their own from inside a carved pumpkin. Each eyeball sits in a swivel socket and is moved by a small SG90 servo. An Arduino Nano ESP32 drives 8 eyes through a PCA9685 servo driver (it can handle up to 16). I built it with 12 eyes at first, but my pumpkin didn't have room for all of them, so the final version uses 8. Every 1.5 seconds, three random eyes each look in a new random direction.
 
 > **Credit:** This build is based on an idea from the YouTube video [Pumpkin Routines DEMO - Pumpkin with moving eyes update](https://www.youtube.com/watch?v=qQNtnuWvH2k) by **Two Boys and a Camera**. This repo documents my own take on the electronics and code.
 
@@ -8,7 +8,7 @@ Plastic eyeballs that look around on their own from inside a carved pumpkin. Eac
 
 Click a thumbnail to watch the video on YouTube.
 
-| A single pair of eyes | 12 eyes in a pumpkin |
+| A single pair of eyes | 12 eyes |
 |---|---|
 | <a href="https://www.youtube.com/watch?v=rMcllJ7E94A"><img src="https://img.youtube.com/vi/rMcllJ7E94A/maxresdefault.jpg" alt="Video: a single pair of pumpkin eyes" width="400"></a> | <a href="https://www.youtube.com/watch?v=TWEZGnq-aPU"><img src="https://img.youtube.com/vi/TWEZGnq-aPU/maxresdefault.jpg" alt="Video: pumpkin with 12 moving eyes" width="400"></a> |
 
