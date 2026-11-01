@@ -8,9 +8,15 @@ Plastic eyeballs that look around on their own from inside a carved pumpkin. Eac
 
 Click a thumbnail to watch the video on YouTube.
 
+**The finished pumpkin with 8 eyes:**
+
+<a href="https://www.youtube.com/shorts/-qXFwKWspwk"><img src="https://img.youtube.com/vi/-qXFwKWspwk/maxresdefault.jpg" alt="Video: the finished pumpkin with 8 moving eyes" width="600"></a>
+
+**Earlier tests:**
+
 | A single pair of eyes | 12 eyes |
 |---|---|
-| <a href="https://www.youtube.com/watch?v=rMcllJ7E94A"><img src="https://img.youtube.com/vi/rMcllJ7E94A/maxresdefault.jpg" alt="Video: a single pair of pumpkin eyes" width="400"></a> | <a href="https://www.youtube.com/watch?v=TWEZGnq-aPU"><img src="https://img.youtube.com/vi/TWEZGnq-aPU/maxresdefault.jpg" alt="Video: pumpkin with 12 moving eyes" width="400"></a> |
+| <a href="https://www.youtube.com/watch?v=rMcllJ7E94A"><img src="https://img.youtube.com/vi/rMcllJ7E94A/maxresdefault.jpg" alt="Video: a single pair of pumpkin eyes" width="400"></a> | <a href="https://www.youtube.com/watch?v=TWEZGnq-aPU"><img src="https://img.youtube.com/vi/TWEZGnq-aPU/maxresdefault.jpg" alt="Video: 12 moving eyes" width="400"></a> |
 
 ## How it works
 
