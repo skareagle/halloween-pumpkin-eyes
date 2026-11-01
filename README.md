@@ -1,6 +1,6 @@
 # Halloween Pumpkin Eyes
 
-Plastic eyeballs that look around on their own from inside a carved pumpkin. Each eyeball sits in a swivel socket and is moved by a small SG90 servo. An Arduino Nano ESP32 drives up to 12 eyes through a PCA9685 servo driver. Every half second, three random eyes each look in a new random direction.
+Plastic eyeballs that look around on their own from inside a carved pumpkin. Each eyeball sits in a swivel socket and is moved by a small SG90 servo. An Arduino Nano ESP32 drives 8 eyes through a PCA9685 servo driver (it can handle up to 16). Every 1.5 seconds, three random eyes each look in a new random direction.
 
 > **Credit:** This build is based on an idea from the YouTube video [Pumpkin Routines DEMO - Pumpkin with moving eyes update](https://www.youtube.com/watch?v=qQNtnuWvH2k) by **Two Boys and a Camera**. This repo documents my own take on the electronics and code.
 
@@ -12,7 +12,7 @@ Plastic eyeballs that look around on their own from inside a carved pumpkin. Eac
 - The **PCA9685** generates the control signal for each servo, so one board handles all the eyes (up to 16).
 - A **5 V supply** powers the servos through the PCA9685's screw terminal. The Nano gets its own power from USB, so servo current surges can't reset it.
 
-When powered on, every eye moves in turn to one end of its range, then the other, then the centre. After that, the sketch keeps picking three different random eyes and moving each one to its own new position, at least 20° away from where it was.
+When powered on, every eye moves in turn to one end of its range, then the other, then the centre. After that, the sketch keeps picking three different random eyes and moving each one to its own new position, at least 40° away from where it was.
 
 ## Parts
 
@@ -21,9 +21,9 @@ When powered on, every eye moves in turn to one end of its range, then the other
 | 1 | Arduino Nano ESP32 | Any ESP32 board works with pin changes. See [Breadboard option](#option-b-breadboard). |
 | 1 | Keyestudio Nano IO Shield v1.0 (KS0146) | Optional. Makes wiring easier. |
 | 1 | PCA9685 16-channel servo driver | Adafruit #815 or a clone. |
-| 12 | SG90 micro servos | One per eye. Fewer is fine. |
-| 12 | Plastic eyeballs | |
-| 12 | 3D-printed eye sockets | [`hardware/eye-socket.stl`](hardware/eye-socket.stl). See [Eye socket](#eye-socket). |
+| 8 | SG90 micro servos | One per eye. Any number from 1 to 16 works. |
+| 8 | Plastic eyeballs | |
+| 8 | 3D-printed eye sockets | [`hardware/eye-socket.stl`](hardware/eye-socket.stl). See [Eye socket](#eye-socket). |
 | 1 | 5 V 3 A power supply | Barrel or bare-wire output. 3 A covers three SG90s moving at once, with some margin. |
 | 1 | 470–1000 µF electrolytic capacitor, 10 V or higher | Smooths servo current spikes. |
 | 1 | USB-C cable and USB charger | Powers the Nano. |
@@ -75,7 +75,7 @@ The shield doesn't expose the Nano's 3V3 pin. Its NRF24L01 header does provide 3
 | Shield NRF header **GND** | PCA9685 **GND** | Required. The only ground link between the Nano and the servo supply. |
 | Shield IIC header **SDA** | PCA9685 **SDA** | Nano A4 |
 | Shield IIC header **SCL** | PCA9685 **SCL** | Nano A5 |
-| Servos 1–12 | PCA9685 channels **0–11** | Brown wire on the GND row |
+| Servos 1–8 | PCA9685 channels **0–7** | Brown wire on the GND row |
 
 Leave these unconnected:
 - The shield's **barrel jack**. It's built for 7–12 V, and the Nano ESP32 needs no extra power from it.
@@ -97,7 +97,7 @@ Here one 5 V supply powers both the servos and the Nano, through a terminal bloc
 | Nano **GND** | PCA9685 **GND** | |
 | Nano **A4** | PCA9685 **SDA** | |
 | Nano **A5** | PCA9685 **SCL** | |
-| Servos 1–12 | PCA9685 channels **0–11** | |
+| Servos 1–8 | PCA9685 channels **0–7** | |
 
 Arduino's documentation gives VIN a range starting at 5 V, which is the very bottom. If the Nano resets when servos move, add a 100–470 µF capacitor across VIN and GND, or power the Nano from USB instead.
 
@@ -136,11 +136,11 @@ All settings are constants at the top of `PumpkinEyes.ino`.
 
 | Setting | Default | What it does |
 |---|---|---|
-| `SERVO_CHANNELS` | `{0, 1, ..., 11}` | PCA9685 channels with an eye attached |
+| `SERVO_CHANNELS` | `{0, 1, ..., 7}` | PCA9685 channels with an eye attached |
 | `MIN_ANGLE` / `MAX_ANGLE` | `0` / `150` | Range each eye moves within |
-| `MIN_CHANGE` | `20` | Minimum degrees between an eye's positions |
+| `MIN_CHANGE` | `40` | Minimum degrees between an eye's positions |
 | `EYES_PER_MOVE` | `3` | How many different eyes move together |
-| `HOLD_MS` | `500` | Pause between each group of random moves |
+| `HOLD_MS` | `1500` | Pause between each group of random moves |
 | `START_HOLD_MS` | `5000` | Pause after each step of the start sequence |
 | `STAGGER_MS` | `600` | Gap between eyes during the start sequence |
 | `SERVO_MIN_US` / `SERVO_MAX_US` | `500` / `2400` | Pulse widths for 0° and 180° |

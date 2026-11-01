@@ -11,14 +11,14 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 
-const int SERVO_CHANNELS[] = {0, 1, 2, 3, 4, 5, 6, 7,8, 9, 10, 11}; // one PCA9685 channel per eye
+const int SERVO_CHANNELS[] = {0, 1, 2, 3, 4, 5, 6, 7}; // one PCA9685 channel per eye
 const int SERVO_COUNT = sizeof(SERVO_CHANNELS) / sizeof(SERVO_CHANNELS[0]);
 const int MIN_ANGLE = 0;
 const int MAX_ANGLE = 150;
-const int MIN_CHANGE = 20;      // minimum difference from previous position
+const int MIN_CHANGE = 40;      // minimum difference from previous position
 const int EYES_PER_MOVE = 3;    // how many different eyes move together
 const int START_HOLD_MS = 5000; // hold time for each start sequence position
-const int HOLD_MS = 500;        // hold time after each group of random moves
+const int HOLD_MS = 1500;       // hold time after each group of random moves
 const int STAGGER_MS = 600;     // gap between servos during start up (one full move)
 
 // SG90 pulse range for 0 and 180 degrees. Narrow these if a servo buzzes
